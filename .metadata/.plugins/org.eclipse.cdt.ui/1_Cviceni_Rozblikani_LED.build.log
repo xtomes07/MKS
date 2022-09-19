@@ -1,0 +1,17 @@
+19:05:30 **** Build of configuration Debug for project 1_Cviceni_Rozblikani_LED ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m0 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f030r8tx.d" -MT"Startup/startup_stm32f030r8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f030r8tx.o" "../Startup/startup_stm32f030r8tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030R8Tx -DSTM32F030x8 -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -ICMSIS/Include -I../Inc -ICMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030R8Tx -DSTM32F030x8 -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -ICMSIS/Include -I../Inc -ICMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030R8Tx -DSTM32F030x8 -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -ICMSIS/Include -I../Inc -ICMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/system_stm32f0xx.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030R8Tx -DSTM32F030x8 -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -ICMSIS/Include -I../Inc -ICMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f0xx.d" -MT"Src/system_stm32f0xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f0xx.o"
+../Src/system_stm32f0xx.c:84:10: fatal error: stm32f0xx.h: No such file or directory
+   84 | #include "stm32f0xx.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:28: Src/system_stm32f0xx.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+19:05:31 Build Failed. 3 errors, 0 warnings. (took 879ms)
+

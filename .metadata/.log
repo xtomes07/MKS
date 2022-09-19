@@ -1,0 +1,39 @@
+!SESSION 2022-09-19 18:41:49.186 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=cs_CZ
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\Client\Desktop\Vysoka_skola\Ing\1. Semestr\Mikrokontroléry a embedded systémy\Cvika\MKS
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-09-19 18:41:54.950
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-09-19 18:41:55.055
+!MESSAGE Log4j initialized with config file C:\Users\Client\Desktop\Vysoka_skola\Ing\1. Semestr\Mikrokontroléry a embedded systémy\Cvika\MKS\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-09-19 18:41:57.610
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-09-19 18:53:32.808
+!MESSAGE Indexed '1_Cviceni_Rozblikani_LED' (3 sources, 53 headers) in 1.12 sec: 1,949 declarations; 2,810 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+!SESSION 2022-09-19 18:59:28.026 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=cs_CZ
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-09-19 18:59:32.587
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-09-19 18:59:32.669
+!MESSAGE Log4j initialized with config file C:\Users\Client\Desktop\Vysoka_skola\Ing\1. Semestr\Mikrokontroléry a embedded systémy\Cvika\MKS\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-09-19 18:59:37.286
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-09-19 19:04:09.080
+!MESSAGE Indexed '1_Cviceni_Rozblikani_LED' (3 sources, 53 headers) in 0,764 sec: 1 949 declarations; 2 810 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0,042 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-09-19 19:04:13.798
+!MESSAGE Indexed '1_Cviceni_Rozblikani_LED' (3 sources, 53 headers) in 0,264 sec: 1 949 declarations; 2 810 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0,042 %)
