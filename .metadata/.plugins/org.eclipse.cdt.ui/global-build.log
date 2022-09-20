@@ -44,3 +44,367 @@ arm-none-eabi-size   CV_1.elf
     588	      8	   1568	   2164	    874	CV_1.elf
 Finished building: default.size.stdout
  
+12:50:31 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:29:14: error: expected ';' before 'Y'
+   29 |  GPIOA->MODER Y= GPIO_MODER_MODER5_0; // vystup 0 pro pin cislo 5
+      |              ^~
+      |              ;
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:50:51 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CV_1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xtomes07\MKS\CV_1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV_1.elf
+ 
+arm-none-eabi-size   CV_1.elf 
+arm-none-eabi-objdump -h -S  CV_1.elf  > "CV_1.list"
+   text	   data	    bss	    dec	    hex	filename
+    640	      8	   1568	   2216	    8a8	CV_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV_1.list
+ 
+12:52:20 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CV_1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xtomes07\MKS\CV_1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV_1.elf
+ 
+arm-none-eabi-size   CV_1.elf 
+arm-none-eabi-objdump -h -S  CV_1.elf  > "CV_1.list"
+   text	   data	    bss	    dec	    hex	filename
+    664	      8	   1568	   2240	    8c0	CV_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV_1.list
+ 
+12:53:52 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-size   CV_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+    664	      8	   1568	   2240	    8c0	CV_1.elf
+Finished building: default.size.stdout
+ 
+12:53:57 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-size   CV_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+    664	      8	   1568	   2240	    8c0	CV_1.elf
+Finished building: default.size.stdout
+ 
+12:54:51 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CV_1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xtomes07\MKS\CV_1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV_1.elf
+ 
+arm-none-eabi-size   CV_1.elf 
+arm-none-eabi-objdump -h -S  CV_1.elf  > "CV_1.list"
+   text	   data	    bss	    dec	    hex	filename
+    624	      8	   1568	   2200	    898	CV_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV_1.list
+ 
+12:54:55 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-size   CV_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+    624	      8	   1568	   2200	    898	CV_1.elf
+Finished building: default.size.stdout
+ 
+12:55:21 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CV_1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xtomes07\MKS\CV_1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV_1.elf
+ 
+arm-none-eabi-size   CV_1.elf 
+arm-none-eabi-objdump -h -S  CV_1.elf  > "CV_1.list"
+   text	   data	    bss	    dec	    hex	filename
+    664	      8	   1568	   2240	    8c0	CV_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV_1.list
+ 
+12:55:31 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-size   CV_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+    664	      8	   1568	   2240	    8c0	CV_1.elf
+Finished building: default.size.stdout
+ 
+12:58:34 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CV_1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xtomes07\MKS\CV_1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV_1.elf
+ 
+arm-none-eabi-size   CV_1.elf 
+arm-none-eabi-objdump -h -S  CV_1.elf  > "CV_1.list"
+   text	   data	    bss	    dec	    hex	filename
+    664	      8	   1568	   2240	    8c0	CV_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV_1.list
+ 
+12:58:38 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-size   CV_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+    664	      8	   1568	   2240	    8c0	CV_1.elf
+Finished building: default.size.stdout
+ 
+12:59:06 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CV_1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xtomes07\MKS\CV_1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV_1.elf
+ 
+arm-none-eabi-size   CV_1.elf 
+arm-none-eabi-objdump -h -S  CV_1.elf  > "CV_1.list"
+   text	   data	    bss	    dec	    hex	filename
+    664	      8	   1568	   2240	    8c0	CV_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV_1.list
+ 
+12:59:09 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-size   CV_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+    664	      8	   1568	   2240	    8c0	CV_1.elf
+Finished building: default.size.stdout
+ 
+13:01:11 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CV_1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xtomes07\MKS\CV_1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV_1.elf
+ 
+arm-none-eabi-size   CV_1.elf 
+arm-none-eabi-objdump -h -S  CV_1.elf  > "CV_1.list"
+   text	   data	    bss	    dec	    hex	filename
+    664	      8	   1568	   2240	    8c0	CV_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV_1.list
+ 
+13:01:22 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-size   CV_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+    664	      8	   1568	   2240	    8c0	CV_1.elf
+Finished building: default.size.stdout
+ 
+13:07:14 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CV_1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xtomes07\MKS\CV_1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV_1.elf
+ 
+arm-none-eabi-size   CV_1.elf 
+arm-none-eabi-objdump -h -S  CV_1.elf  > "CV_1.list"
+   text	   data	    bss	    dec	    hex	filename
+    664	      8	   1568	   2240	    8c0	CV_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV_1.list
+ 
+13:08:23 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CV_1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xtomes07\MKS\CV_1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV_1.elf
+ 
+arm-none-eabi-size   CV_1.elf 
+arm-none-eabi-objdump -h -S  CV_1.elf  > "CV_1.list"
+   text	   data	    bss	    dec	    hex	filename
+    664	      8	   1568	   2240	    8c0	CV_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV_1.list
+ 
+13:10:13 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CV_1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xtomes07\MKS\CV_1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV_1.elf
+ 
+arm-none-eabi-size   CV_1.elf 
+arm-none-eabi-objdump -h -S  CV_1.elf  > "CV_1.list"
+   text	   data	    bss	    dec	    hex	filename
+    664	      8	   1568	   2240	    8c0	CV_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV_1.list
+ 
+13:21:37 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:31:19: warning: integer constant is too large for its type
+   31 |  uint8_t pole[32]=101010011101110111001010100;
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Src/main.c:31:19: error: invalid initializer
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+13:22:27 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:31:2: error: 'pole' undeclared (first use in this function)
+   31 |  pole[32]  =101010011101110111001010100;
+      |  ^~~~
+../Src/main.c:31:2: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:31:13: warning: integer constant is too large for its type
+   31 |  pole[32]  =101010011101110111001010100;
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+13:24:22 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:31:21: error: invalid initializer
+   31 |  uint8_t pole[32]  =0b101010011101110111001010100;
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+13:26:59 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CV_1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xtomes07\MKS\CV_1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV_1.elf
+ 
+arm-none-eabi-size   CV_1.elf 
+arm-none-eabi-objdump -h -S  CV_1.elf  > "CV_1.list"
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	CV_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV_1.list
+ 
+13:27:07 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-size   CV_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	CV_1.elf
+Finished building: default.size.stdout
+ 
+13:28:37 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CV_1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xtomes07\MKS\CV_1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV_1.elf
+ 
+arm-none-eabi-size   CV_1.elf 
+arm-none-eabi-objdump -h -S  CV_1.elf  > "CV_1.list"
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	CV_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV_1.list
+ 
+13:28:44 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-size   CV_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	CV_1.elf
+Finished building: default.size.stdout
+ 
+13:29:23 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CV_1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xtomes07\MKS\CV_1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV_1.elf
+ 
+arm-none-eabi-size   CV_1.elf 
+arm-none-eabi-objdump -h -S  CV_1.elf  > "CV_1.list"
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	CV_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV_1.list
+ 
+13:29:27 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-size   CV_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	CV_1.elf
+Finished building: default.size.stdout
+ 
+13:30:38 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CV_1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xtomes07\MKS\CV_1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV_1.elf
+ 
+arm-none-eabi-size   CV_1.elf 
+arm-none-eabi-objdump -h -S  CV_1.elf  > "CV_1.list"
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	CV_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV_1.list
+ 
+13:31:22 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-size   CV_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	CV_1.elf
+Finished building: default.size.stdout
+ 
+13:32:24 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CV_1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xtomes07\MKS\CV_1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV_1.elf
+ 
+arm-none-eabi-size   CV_1.elf 
+arm-none-eabi-objdump -h -S  CV_1.elf  > "CV_1.list"
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	CV_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV_1.list
+ 
+13:34:37 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CV_1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xtomes07\MKS\CV_1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV_1.elf
+ 
+arm-none-eabi-size   CV_1.elf 
+arm-none-eabi-objdump -h -S  CV_1.elf  > "CV_1.list"
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	CV_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV_1.list
+ 
+13:34:54 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-size   CV_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	CV_1.elf
+Finished building: default.size.stdout
+ 
+13:36:25 **** Incremental Build of configuration Debug for project CV_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DSTM32F030R8Tx -DSTM32 -DSTM32F0 -DNUCLEO_F030R8 -c -I../Inc -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Device/ST/STM32F0xx/Include" -I"C:/Temp/xtomes07/MKS/CV_1/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CV_1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\xtomes07\MKS\CV_1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV_1.elf
+ 
+arm-none-eabi-size   CV_1.elf 
+arm-none-eabi-objdump -h -S  CV_1.elf  > "CV_1.list"
+   text	   data	    bss	    dec	    hex	filename
+    772	      8	   1568	   2348	    92c	CV_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV_1.list
+ 
