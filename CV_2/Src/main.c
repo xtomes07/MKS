@@ -22,6 +22,8 @@
 #define LED_TIME_BLINK 300
 #define LED_TIME_SHORT 100
 #define LED_TIME_LONG 1000
+#define BUTTON_DEBOUNCE 40
+#define BUTTON_DEBOUNCE_SHORT 5
 
 static volatile uint32_t Tick;
 
@@ -48,20 +50,37 @@ void blikac(void)
 	}
  }
 
-void tlacitka(void){
-
-	static uint32_t old_s1;
-	static uint32_t old_s2;
+void tlacitka(void)
+{
 	static uint32_t off_time;
-	uint32_t new_s1 = GPIOC->IDR & (1<<1);
+	static uint8_t debounceDelay;
+
+	//static uint32_t old_s1;
+	//uint32_t new_s1 = GPIOC->IDR & (1<<1);
+	static uint32_t old_s2;
 	uint32_t new_s2 = GPIOC->IDR & (1<<0);
 
+	if (Tick > debounceDelay + BUTTON_DEBOUNCE_SHORT){
+		static uint16_t debounce = 0xFFFF;
+		debounce <<=1;
+
+		//sw1
+		if (GPIOC -> IDR & (1<<1)) {
+			debounce |= 0x001;
+		}
+		if (debounce == 0x8000){
+			off_time = Tick + LED_TIME_LONG;
+			GPIOB ->BSRR = (1<<0);
+		}
+	}
+
+	/*2.4
 	//switch1
 	if (old_s1 && !new_s1) { // falling edge
 		off_time = Tick + LED_TIME_LONG;
 		GPIOB->BSRR = (1<<0);
 	}
-	old_s1 = new_s1;
+	old_s1 = new_s1;*/
 
 	//switch2
 	if (old_s2 && !new_s2) { // falling edge
@@ -73,6 +92,7 @@ void tlacitka(void){
 	if (Tick > off_time) {		//LED off
 		GPIOB->BRR = (1<<0);
 	}
+
 }
 
 
