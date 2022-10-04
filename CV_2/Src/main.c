@@ -19,6 +19,10 @@
 #include <stdint.h>
 #include <stm32f0xx.h>
 
+#define LED_TIME_BLINK 300
+
+static volatile uint32_t Tick;
+
 void EXTI0_1_IRQHandler(void)
 {
 	if (EXTI->PR & EXTI_PR_PR0) { // check line 0 has triggered the IT
@@ -27,6 +31,22 @@ void EXTI0_1_IRQHandler(void)
 	}
  }
 
+void SysTick_Handler(void)
+{
+	Tick++;
+}
+
+void blikac(void)
+{
+	static uint32_t delay;
+
+	if (Tick > delay + LED_TIME_BLINK) {
+		GPIOA->ODR ^= (1<<4);//toggle
+		delay = Tick;
+	}
+ }
+
+
 
 #if !defined(__SOFT_FP__) && defined(__ARM_FP)
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
@@ -34,12 +54,13 @@ void EXTI0_1_IRQHandler(void)
 
 int main(void)
 {
+	SysTick_Config(8000); //1ms
 
-    RCC->AHBENR |= RCC_AHBENR_GPIOAEN | RCC_AHBENR_GPIOBEN | RCC_AHBEND_GPIOCEN; // enable
+    RCC->AHBENR |= RCC_AHBENR_GPIOAEN | RCC_AHBENR_GPIOBEN | RCC_AHBENR_GPIOCEN; // enable
 	GPIOA->MODER |= GPIO_MODER_MODER4_0; // LED1 = PA4, output
 	GPIOB->MODER |= GPIO_MODER_MODER0_0; // LED2 = PB0, output
 	GPIOC->PUPDR |= GPIO_PUPDR_PUPDR0_0; // S2 = PC0, pullup
-	GPIOC->PUPDR |= GPIO_PUPDR_PUPRD1_0; // S1 = PC1, pullup
+	GPIOC->PUPDR |= GPIO_PUPDR_PUPDR1_0; // S1 = PC1, pullup
 
 	RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN; // clock enable SYSCFG
 
