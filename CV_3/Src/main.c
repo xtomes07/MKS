@@ -18,7 +18,7 @@
 
 #include <stdint.h>
 #include <stm32f0xx.h>
-#include <sct.h>
+#include <sct.h>  //inluduji se vzdy jen .h soubory
 
 #if !defined(__SOFT_FP__) && defined(__ARM_FP)
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
@@ -26,15 +26,15 @@
 
 int main(void)
 {
-	sct_init();
-	sct_led(0x7A5C36DE);
+	sct_init();     				//start initialization
+	sct_led(0x7A5C36DE);			//value for text "bye" on sevesegment
 	for( volatile uint32_t j = 0; j <3000000; j++){}    //busy waiting loop
 
 	/* Loop forever */
 	for(;;)
 	{
-		for (uint16_t i = 0; i < 1000; i = i + 111) {
-			sct_value(i);
+		for (uint16_t i = 0; i < 1000; i = i + 111) {          //cyclus for value with step 111
+			sct_value(i);	                                   //show number on seven segment display
 			for( volatile uint32_t j = 0; j <500000; j++){}    //busy waiting loop
 		}
 	}
