@@ -142,10 +142,10 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
 	static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;   //stavovy automat
-	uint32_t delay;
+	static uint32_t delay;
 
 	if (state == SHOW_POT) {
-		sct_value(raw_pot * 500 / 4096, raw_pot * 9 / 4096); // zobrazeni hodnoty z potaku
+		sct_value(raw_pot * 501 / 4096, raw_pot * 9 / 4096); // zobrazeni hodnoty z potaku
 
 	}
 	else if (state == SHOW_VOLT) {
@@ -172,12 +172,6 @@ int main(void)
 	if (HAL_GetTick() > 1000 + delay) {					//casovat pro navrat na pot
 		state = SHOW_POT;
 	}
-
-
-
-
-
-
 
   }
   /* USER CODE END 3 */
