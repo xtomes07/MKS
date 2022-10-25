@@ -24,7 +24,7 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
+#include <stdlib.h>
 
 /* USER CODE END Includes */
 
@@ -38,6 +38,7 @@
 
 #define CMD_BUFFER_LEN 256
 #define RX_BUFFER_LEN 64
+#define EEPROM_ADDR 0xA0
 
 /* USER CODE END PD */
 
@@ -84,6 +85,9 @@ static void uart_process_command(char *cmd)	//pro vypis
 	/*2.4*/
 	char *token;
 	token = strtok(cmd, " ");
+	uint16_t addr;   //16 bitova adresa
+	uint8_t value;	 //8 bitova hodnota
+	uint8_t valueDump[16];
 
 	if (strcasecmp(token, "HELLO") == 0) {
 		printf("Komunikace OK\n");
@@ -109,7 +113,9 @@ static void uart_process_command(char *cmd)	//pro vypis
 		}
 
 		printf("OK \n");
+
 	} else if (strcasecmp(token, "STATUS") == 0) {
+		token = strtok(NULL, " ");
 		uint8_t state_led;
 
 		state_led = HAL_GPIO_ReadPin(LED1_GPIO_Port, LED1_Pin);
@@ -124,6 +130,35 @@ static void uart_process_command(char *cmd)	//pro vypis
 			printf("LED2 sviti\n");
 		} else {
 			printf("LED2 nesviti\n");
+		}
+	} else if (strcasecmp(token, "READ") == 0 ) {
+		token = strtok(NULL, " ");
+
+		addr = atoi(token); //string to int
+		HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, &value, 1, 1000);
+
+		printf("Adresa: 0x%04X Hodnota: 0x%02X\n", addr, value);
+
+	} else if (strcasecmp(token, "WRITE") == 0 ) {
+		token = strtok(NULL, " ");
+		addr = atoi(token);			//ziskani zadane adresy
+
+		token = strtok(NULL, " ");
+		value = atoi(token);		//ziskani hodnoty pro ulozeni na adresu
+
+		HAL_I2C_Mem_Write(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, &value, 1, 1000);
+
+		/* Check if the EEPROM is ready for a new operation */
+		while (HAL_I2C_IsDeviceReady(&hi2c1, EEPROM_ADDR, 300, 1000) == HAL_TIMEOUT) {}
+
+		printf("OK\n");
+
+	} else if (strcasecmp(token, "DUMP") == 0 ) {
+		HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, 0, I2C_MEMADD_SIZE_16BIT,  valueDump, 16, 1000);
+
+		for (int i = 0; i < 16; i++){
+			printf("%02X ", valueDump[i]);
+			if ((i % 8) == 7) printf("\n");
 		}
 	} else {
 		printf ("neznamy prikaz\n");
