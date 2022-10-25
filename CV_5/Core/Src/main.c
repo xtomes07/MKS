@@ -160,6 +160,7 @@ static void uart_process_command(char *cmd)	//pro vypis
 			printf("%02X ", valueDump[i]);
 			if ((i % 8) == 7) printf("\n");
 		}
+
 	} else {
 		printf ("neznamy prikaz\n");
 	}
