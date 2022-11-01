@@ -33,6 +33,7 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define CONVERT_T_DELAY 750
+#define CONVERT_NTC_DELAY 500
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -182,10 +183,53 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  //2.3
+	  int16_t tempNTC;
+	  int16_t temp_DS18B20;
+	  static uint32_t lastTimeDS = 0;
+	  static uint32_t lastTimeNTC = 0;
+
+
+
+
+	  if (HAL_GetTick() > lastTimeDS + CONVERT_T_DELAY ) {	//refres hodnot
+		  //DS18B20
+		  OWConvertAll();
+		  OWReadTemperature(&temp_DS18B20);					//cteni vysledku
+
+		  lastTimeDS = HAL_GetTick();
+	  } else if (HAL_GetTick() > lastTimeNTC + CONVERT_NTC_DELAY || lastTimeNTC == 0) {
+		  //NTC
+		  tempNTC = HAL_ADC_GetValue(&hadc);				//vycteni hodnoty z AD prevodniku
+		  lastTimeNTC = HAL_GetTick();
+	  }
+
+
+	  static enum {SHOW_NTC, SHOW_DS18B20} state = SHOW_NTC;	//stavovy automat
+
+	  if (state == SHOW_NTC) {
+		  sct_value(lookupTable[tempNTC], 0);
+		  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
+	  } else if (state == SHOW_DS18B20) {
+		  sct_value(temp_DS18B20 / 10, 0);
+		  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);
+		  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
+	  }
+
+	  if (HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0) {			//cteni switch
+		  state = SHOW_NTC;
+	  } else if (HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin) == 0) {
+		  state = SHOW_DS18B20;
+	  }
+
+
+
+
+	  /*2.3
 	  uint16_t tempNTC;
 	  tempNTC = HAL_ADC_GetValue(&hadc);		//vycteni hodnoty z AD prevodniku
 	  sct_value(lookupTable[tempNTC], 0);		//zobrazeni na dipleji
+	  */
 
 	  /*2.2
 	  int16_t temp_DS18B20;
