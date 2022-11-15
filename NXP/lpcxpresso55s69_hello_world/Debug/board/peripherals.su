@@ -1,0 +1,5 @@
+C:\Temp\xtomes07\NXP\lpcxpresso55s69_hello_world\drivers/fsl_ctimer.h:497:20:CTIMER_StartTimer	16	static
+../board/peripherals.c:137:13:CTIMER1_init	8	static
+../board/peripherals.c:199:13:CTIMER2_init	8	static
+../board/peripherals.c:211:6:BOARD_InitPeripherals	8	static
+../board/peripherals.c:221:6:BOARD_InitBootPeripherals	8	static

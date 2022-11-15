@@ -1,0 +1,6 @@
+C:\Temp\xtomes07\NXP\lpcxpresso55s69_hello_world\drivers/fsl_ctimer.h:497:20:CTIMER_StartTimer	16	static
+C:\Temp\xtomes07\NXP\lpcxpresso55s69_hello_world\drivers/fsl_power.h:398:20:POWER_SetBodVbatLevel	16	static
+C:\Temp\xtomes07\NXP\lpcxpresso55s69_hello_world\drivers/fsl_powerquad.h:1873:20:PQ_SinF32	24	static
+../source/hello_world.c:34:6:Generate_sin_table_float	48	static
+../source/hello_world.c:54:6:TimerIRQ	16	static
+../source/hello_world.c:68:5:main	8	static
