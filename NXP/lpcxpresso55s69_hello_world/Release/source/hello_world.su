@@ -1,0 +1,4 @@
+../source/hello_world.c:34:6:Generate_sin_table_float	48	static
+../source/hello_world.c:54:6:TimerIRQ	0	static
+../source/hello_world.c:61:10:strcmp_safe	16	static
+../source/hello_world.c:89:5:main	64	static

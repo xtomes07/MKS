@@ -1,0 +1,5 @@
+../drivers/fsl_powerquad_basic.c:22:6:PQ_GetDefaultConfig	0	static
+../drivers/fsl_powerquad_basic.c:36:6:PQ_SetConfig	8	static
+../drivers/fsl_powerquad_basic.c:51:6:PQ_Init	8	static
+../drivers/fsl_powerquad_basic.c:70:6:PQ_Deinit	0	static
+../drivers/fsl_powerquad_basic.c:79:6:PQ_SetFormat	24	static

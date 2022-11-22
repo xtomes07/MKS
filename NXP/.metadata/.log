@@ -420,3 +420,741 @@ Invalid thread id: 1
 java.lang.Exception: Invalid thread id: 1
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1013)
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:842)
+!SESSION 2022-11-22 11:52:40.919 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-11-22 11:56:38.805
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-11-22 11:56:51.319
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'V:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.cdt.ui 4 0 2022-11-22 11:56:52.725
+!MESSAGE Error in CDT UI during reconcile
+!STACK 1
+C Model Exception: C Model Status [Element fsl_usart.c does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:485)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:583)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:65)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:346)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:613)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:641)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:365)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:79)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:64)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:89)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:346)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2022-11-22 11:56:52.881
+!MESSAGE Element fsl_usart.c does not exist.
+
+!ENTRY com.nxp.swtools.provider.processors 4 0 2022-11-22 11:56:57.147
+!MESSAGE Copying data from web - disk error
+!STACK 0
+java.nio.file.AccessDeniedException: C:\ProgramData\NXP\mcu_data_v12\expansion_headers\dir.properties
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(Unknown Source)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(Unknown Source)
+	at java.base/java.nio.file.Files.deleteIfExists(Unknown Source)
+	at java.base/java.nio.file.Files.copy(Unknown Source)
+	at com.nxp.swtools.kex.storage.utils.CopyTask2.unzipStream(CopyTask2.java:432)
+	at com.nxp.swtools.kex.storage.utils.CopyTask2.run(CopyTask2.java:371)
+	at com.nxp.swtools.provider.processors.KExProcessorsProvider.downloadDataForSdk(KExProcessorsProvider.java:1437)
+	at com.nxp.swtools.provider.processors.KExProcessorsProvider.downloadOrUpdateConfigs(KExProcessorsProvider.java:963)
+	at com.nxp.swtools.utils.processors.ProcessorDataUpdateUI.downloadOrUpdateConfigFiles(ProcessorDataUpdateUI.java:447)
+	at com.nxp.swtools.utils.processors.ProcessorDataUpdateUI.downloadOrUpdateAllData(ProcessorDataUpdateUI.java:77)
+	at com.nxp.swtools.utils.ConfigurationUtils.lambda$4(ConfigurationUtils.java:374)
+	at com.nxp.swtools.framework.ApplicationWorkbenchWindowAdvisor$1.run(ApplicationWorkbenchWindowAdvisor.java:296)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.crt.log 1 0 2022-11-22 12:18:28.807
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 12:18:29.315
+!MESSAGE RedlinkServer telnet session connected on port 3025->50960 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 12:18:58.358
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY com.crt.log 1 0 2022-11-22 12:19:04.459
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 12:19:04.972
+!MESSAGE RedlinkServer telnet session connected on port 3025->50969 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 12:19:28.161
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 12:19:28.668
+!MESSAGE RedlinkServer telnet session connected on port 3025->50980 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 12:19:42.838
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=50988, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world/Debug, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 12:19:45.364
+!MESSAGE Telnet session connected on port 3330->50991 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 12:20:37.052
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 12:20:37.567
+!MESSAGE RedlinkServer telnet session connected on port 3025->51007 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 12:20:44.536
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=51012, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world/Debug, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 12:20:47.122
+!MESSAGE Telnet session connected on port 3330->51015 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-11-22 12:22:20.934
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@14512089): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-interpreter-exec console kill
+Error message from debugger back end:
+Can't kill process java.lang.Exception: Can't kill process' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2022-11-22 12:22:20.934
+!MESSAGE Failed to execute MI command:
+-interpreter-exec console kill
+Error message from debugger back end:
+Can't kill process
+!STACK 0
+java.lang.Exception: Can't kill process
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1013)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:842)
+
+!ENTRY com.crt.log 1 0 2022-11-22 12:34:27.091
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 12:34:27.611
+!MESSAGE RedlinkServer telnet session connected on port 3025->60520 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 12:36:25.954
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=60549, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world/Debug, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 12:36:28.507
+!MESSAGE Telnet session connected on port 3330->60552 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 12:37:32.393
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 12:37:32.911
+!MESSAGE RedlinkServer telnet session connected on port 3025->60577 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 12:37:44.207
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=60579, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world/Debug, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 12:37:46.731
+!MESSAGE Telnet session connected on port 3330->60582 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 12:40:36.815
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 12:40:37.330
+!MESSAGE RedlinkServer telnet session connected on port 3025->60639 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-11-22 12:40:52.308
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-11-22 12:40:52.309
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-11-22 12:40:52.309
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-11-22 12:40:52.309
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-11-22 12:40:52.310
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-11-22 12:40:52.310
+!MESSAGE Request for monitor: 'NOTHING_BEING_DEBUGGED' resulted in a rejected execution exception.
+
+!ENTRY com.crt.log 1 0 2022-11-22 12:42:54.110
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=60678, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world/Debug, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 12:42:56.706
+!MESSAGE Telnet session connected on port 3330->60682 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:09:12.733
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 13:09:13.247
+!MESSAGE RedlinkServer telnet session connected on port 3025->61123 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 -1 2022-11-22 13:09:29.379
+!MESSAGE Read timed out
+
+!STACK 0
+java.io.IOException: Read timed out
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.receive(RedlinkServerClient.java:978)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1068)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1053)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1040)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.wireConnect(RedlinkServerClient.java:1189)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.ideConnect(AbstractJtagDiscovery.java:232)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.connect(AbstractJtagDiscovery.java:196)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.discover(AbstractJtagDiscovery.java:155)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.TargetDiscovery.jtagDiscovery(TargetDiscovery.java:454)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.getEmulatorInfo(LaunchScriptUtils.java:257)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.init(LaunchScriptUtils.java:497)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:165)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:152)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.services.TargetDiscoveryService.getTargetDiscovery(TargetDiscoveryService.java:138)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.override.LSFinalLaunchSequence$TargetDiscoveryJob.run(LSFinalLaunchSequence.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 4 2022-11-22 13:09:29.380
+!MESSAGE Read timed out
+
+!STACK 0
+java.io.IOException: Read timed out
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.receive(RedlinkServerClient.java:978)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1068)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1053)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1040)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.wireConnect(RedlinkServerClient.java:1189)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.ideConnect(AbstractJtagDiscovery.java:232)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.connect(AbstractJtagDiscovery.java:196)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.discover(AbstractJtagDiscovery.java:155)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.TargetDiscovery.jtagDiscovery(TargetDiscovery.java:454)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.getEmulatorInfo(LaunchScriptUtils.java:257)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.init(LaunchScriptUtils.java:497)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:165)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:152)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.services.TargetDiscoveryService.getTargetDiscovery(TargetDiscoveryService.java:138)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.override.LSFinalLaunchSequence$TargetDiscoveryJob.run(LSFinalLaunchSequence.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:09:29.381
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.receive(RedlinkServerClient.java:978)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:09:29.381
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1068)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:09:29.381
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1053)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:09:29.381
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1040)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:09:29.381
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.wireConnect(RedlinkServerClient.java:1189)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:09:29.381
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.ideConnect(AbstractJtagDiscovery.java:232)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:09:29.381
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.connect(AbstractJtagDiscovery.java:196)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:09:29.381
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.discover(AbstractJtagDiscovery.java:155)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:09:29.381
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.TargetDiscovery.jtagDiscovery(TargetDiscovery.java:454)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:09:29.381
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.getEmulatorInfo(LaunchScriptUtils.java:257)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:09:29.381
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.init(LaunchScriptUtils.java:497)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:09:29.381
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:165)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:09:29.381
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:152)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:09:29.381
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.services.TargetDiscoveryService.getTargetDiscovery(TargetDiscoveryService.java:138)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:09:29.381
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.override.LSFinalLaunchSequence$TargetDiscoveryJob.run(LSFinalLaunchSequence.java:124)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:09:29.381
+!MESSAGE 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:09:45.681
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:09:51.578
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 13:09:52.092
+!MESSAGE RedlinkServer telnet session connected on port 3025->61132 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 -1 2022-11-22 13:10:07.926
+!MESSAGE Read timed out
+
+!STACK 0
+java.io.IOException: Read timed out
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.receive(RedlinkServerClient.java:978)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1068)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1053)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1040)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.wireConnect(RedlinkServerClient.java:1189)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.ideConnect(AbstractJtagDiscovery.java:232)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.connect(AbstractJtagDiscovery.java:196)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.discover(AbstractJtagDiscovery.java:155)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.TargetDiscovery.jtagDiscovery(TargetDiscovery.java:454)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.getEmulatorInfo(LaunchScriptUtils.java:257)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.init(LaunchScriptUtils.java:497)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:165)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:152)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.services.TargetDiscoveryService.getTargetDiscovery(TargetDiscoveryService.java:138)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.override.LSFinalLaunchSequence$TargetDiscoveryJob.run(LSFinalLaunchSequence.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 4 2022-11-22 13:10:07.927
+!MESSAGE Read timed out
+
+!STACK 0
+java.io.IOException: Read timed out
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.receive(RedlinkServerClient.java:978)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1068)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1053)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1040)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.wireConnect(RedlinkServerClient.java:1189)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.ideConnect(AbstractJtagDiscovery.java:232)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.connect(AbstractJtagDiscovery.java:196)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.discover(AbstractJtagDiscovery.java:155)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.TargetDiscovery.jtagDiscovery(TargetDiscovery.java:454)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.getEmulatorInfo(LaunchScriptUtils.java:257)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.init(LaunchScriptUtils.java:497)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:165)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:152)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.services.TargetDiscoveryService.getTargetDiscovery(TargetDiscoveryService.java:138)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.override.LSFinalLaunchSequence$TargetDiscoveryJob.run(LSFinalLaunchSequence.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:10:07.927
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.receive(RedlinkServerClient.java:978)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:10:07.927
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1068)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:10:07.927
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1053)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:10:07.927
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1040)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:10:07.927
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.wireConnect(RedlinkServerClient.java:1189)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:10:07.927
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.ideConnect(AbstractJtagDiscovery.java:232)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:10:07.927
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.connect(AbstractJtagDiscovery.java:196)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:10:07.927
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.discover(AbstractJtagDiscovery.java:155)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:10:07.927
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.TargetDiscovery.jtagDiscovery(TargetDiscovery.java:454)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:10:07.927
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.getEmulatorInfo(LaunchScriptUtils.java:257)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:10:07.927
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.init(LaunchScriptUtils.java:497)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:10:07.927
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:165)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:10:07.927
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:152)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:10:07.927
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.services.TargetDiscoveryService.getTargetDiscovery(TargetDiscoveryService.java:138)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:10:07.927
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.override.LSFinalLaunchSequence$TargetDiscoveryJob.run(LSFinalLaunchSequence.java:124)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:10:07.927
+!MESSAGE 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:10:22.872
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 13:10:24.405
+!MESSAGE RedlinkServer telnet session connected on port 3025->61141 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:12:53.143
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 13:12:53.656
+!MESSAGE RedlinkServer telnet session connected on port 3025->61185 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 -1 2022-11-22 13:13:09.823
+!MESSAGE Read timed out
+
+!STACK 0
+java.io.IOException: Read timed out
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.receive(RedlinkServerClient.java:978)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1068)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1053)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1040)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.wireConnect(RedlinkServerClient.java:1189)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.ideConnect(AbstractJtagDiscovery.java:232)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.connect(AbstractJtagDiscovery.java:196)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.discover(AbstractJtagDiscovery.java:155)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.TargetDiscovery.jtagDiscovery(TargetDiscovery.java:454)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.getEmulatorInfo(LaunchScriptUtils.java:257)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.init(LaunchScriptUtils.java:497)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:165)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:152)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.services.TargetDiscoveryService.getTargetDiscovery(TargetDiscoveryService.java:138)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.override.LSFinalLaunchSequence$TargetDiscoveryJob.run(LSFinalLaunchSequence.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 4 2022-11-22 13:13:09.824
+!MESSAGE Read timed out
+
+!STACK 0
+java.io.IOException: Read timed out
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.receive(RedlinkServerClient.java:978)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1068)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1053)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1040)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.wireConnect(RedlinkServerClient.java:1189)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.ideConnect(AbstractJtagDiscovery.java:232)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.connect(AbstractJtagDiscovery.java:196)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.discover(AbstractJtagDiscovery.java:155)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.TargetDiscovery.jtagDiscovery(TargetDiscovery.java:454)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.getEmulatorInfo(LaunchScriptUtils.java:257)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.init(LaunchScriptUtils.java:497)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:165)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:152)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.services.TargetDiscoveryService.getTargetDiscovery(TargetDiscoveryService.java:138)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.override.LSFinalLaunchSequence$TargetDiscoveryJob.run(LSFinalLaunchSequence.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:09.824
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.receive(RedlinkServerClient.java:978)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:09.824
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1068)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:09.824
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1053)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:09.824
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1040)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:09.825
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.redlink.client.RedlinkServerClient.wireConnect(RedlinkServerClient.java:1189)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:09.825
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.ideConnect(AbstractJtagDiscovery.java:232)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:09.825
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.connect(AbstractJtagDiscovery.java:196)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:09.825
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.jtag.AbstractJtagDiscovery.discover(AbstractJtagDiscovery.java:155)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:09.825
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.emulators.TargetDiscovery.jtagDiscovery(TargetDiscovery.java:454)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:09.825
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.getEmulatorInfo(LaunchScriptUtils.java:257)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:09.825
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.init(LaunchScriptUtils.java:497)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:09.825
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:165)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:09.825
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LaunchScriptUtils.<init>(LaunchScriptUtils.java:152)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:09.825
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.services.TargetDiscoveryService.getTargetDiscovery(TargetDiscoveryService.java:138)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:09.825
+!MESSAGE 	at com.nxp.mcuxpresso.core.debug.support.linkserver.override.LSFinalLaunchSequence$TargetDiscoveryJob.run(LSFinalLaunchSequence.java:124)
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:09.825
+!MESSAGE 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:13:23.706
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 13:13:26.750
+!MESSAGE RedlinkServer telnet session connected on port 3025->61195 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:13:26.828
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=61196, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world/Debug, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:13:27.483
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 13:13:27.994
+!MESSAGE RedlinkServer telnet session connected on port 3025->61198 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 13:13:30.575
+!MESSAGE Telnet session connected on port 3330->61202 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2022-11-22 13:13:40.140
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote localhost:10989
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: (undocumented errno 10061).
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:40.383
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:40.383
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:40.383
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:40.383
+!MESSAGE 31: No connection to chip's debug port
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:40.383
+!MESSAGE Debugging context: lpcxpresso55s69_hello_world LinkServer Debug
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:13:49.939
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 13:13:50.452
+!MESSAGE RedlinkServer telnet session connected on port 3025->61209 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2022-11-22 13:13:50.455
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-11-22 13:13:50.459
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$16@5ea2576b): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2022-11-22 13:13:50.459
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2022-11-22 13:13:50.474
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+-target-select extended-remote localhost:10989
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: (undocumented errno 10061).
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote localhost:10989
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: (undocumented errno 10061).
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.nxp.mcuxpresso.core.debug.support.linkserver.launch.LinkServerGdbLaunchDelegate.launch(LinkServerGdbLaunchDelegate.java:158)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 0 2022-11-22 13:13:50.474
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote localhost:10989
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: (undocumented errno 10061).
+
+!ENTRY com.crt.log 4 -1 2022-11-22 13:13:50.637
+!MESSAGE Write failed: 
+
+!STACK 0
+java.lang.Exception: java.io.IOException: Write failed: 
+
+	at com.crt.utils.general.Reporter.log(Reporter.java:591)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.shutdown(MCXTelnetService.java:201)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.launchesTerminated(MCXTelnetService.java:377)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:262)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1038)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:479)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch.access$1(DsfLaunch.java:1)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch.lambda$1(DsfLaunch.java:47)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.run(DebugPlugin.java:1175)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.async(DebugPlugin.java:1162)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:478)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Write failed: 
+
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.writeToServer(MCXTelnetService.java:569)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.shutdown(MCXTelnetService.java:199)
+	... 13 more
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:13:50.638
+!MESSAGE Stream is null in null
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:16:15.511
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 13:16:16.032
+!MESSAGE RedlinkServer telnet session connected on port 3025->61251 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:16:22.562
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=61256, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world/Debug, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 13:16:25.098
+!MESSAGE Telnet session connected on port 3330->61259 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:19:15.380
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 13:19:15.888
+!MESSAGE RedlinkServer telnet session connected on port 3025->61320 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:19:22.666
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=61324, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world/Debug, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 13:19:25.191
+!MESSAGE Telnet session connected on port 3330->61328 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:22:53.806
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 13:22:54.321
+!MESSAGE RedlinkServer telnet session connected on port 3025->61391 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:23:01.136
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=61396, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world/Debug, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 13:23:03.667
+!MESSAGE Telnet session connected on port 3330->61399 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:25:52.395
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 13:25:52.910
+!MESSAGE RedlinkServer telnet session connected on port 3025->61442 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:25:59.690
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=61446, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world/Debug, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 13:26:02.266
+!MESSAGE Telnet session connected on port 3330->61450 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:29:13.563
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 13:29:14.077
+!MESSAGE RedlinkServer telnet session connected on port 3025->61500 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:29:20.804
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=61504, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world/Debug, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 13:29:23.377
+!MESSAGE Telnet session connected on port 3330->61508 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:31:16.701
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 13:31:17.217
+!MESSAGE RedlinkServer telnet session connected on port 3025->61536 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:31:24.288
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=61539, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world/Debug, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 13:31:26.816
+!MESSAGE Telnet session connected on port 3330->61542 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:32:12.185
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 13:32:12.695
+!MESSAGE RedlinkServer telnet session connected on port 3025->61564 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:32:22.878
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=61569, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world/Debug, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 13:32:25.473
+!MESSAGE Telnet session connected on port 3330->61572 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:35:15.696
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 13:35:16.208
+!MESSAGE RedlinkServer telnet session connected on port 3025->61616 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:35:26.828
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=61621, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world/Debug, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 13:35:29.369
+!MESSAGE Telnet session connected on port 3330->61632 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-22 13:36:36.035
+!MESSAGE Indexed 'lpcxpresso55s69_hello_world' (32 sources, 53 headers) in 2,65 sec: 8 799 declarations; 25 910 references; 1 unresolved inclusions; 50 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:37:03.901
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 13:37:04.420
+!MESSAGE RedlinkServer telnet session connected on port 3025->61674 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2022-11-22 13:37:16.496
+!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:37:21.034
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=61679, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world/Release, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 13:37:23.616
+!MESSAGE Telnet session connected on port 3330->61682 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-22 13:39:12.572
+!MESSAGE Indexed 'lpcxpresso55s69_hello_world' (32 sources, 53 headers) in 1,53 sec: 8 845 declarations; 27 145 references; 1 unresolved inclusions; 50 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:39:22.659
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 13:39:23.174
+!MESSAGE RedlinkServer telnet session connected on port 3025->61716 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:39:30.149
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=61717, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world/Debug, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 13:39:32.740
+!MESSAGE Telnet session connected on port 3330->61720 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:40:04.188
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 13:40:04.694
+!MESSAGE RedlinkServer telnet session connected on port 3025->61731 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:40:11.516
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=61734, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world/Debug, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 13:40:14.065
+!MESSAGE Telnet session connected on port 3330->61738 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 13:59:55.203
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 13:59:55.722
+!MESSAGE RedlinkServer telnet session connected on port 3025->62056 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 14:00:05.588
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=62059, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world/Debug, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 14:00:08.174
+!MESSAGE Telnet session connected on port 3330->62063 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-22 14:24:39.235
+!MESSAGE Indexed 'lpcxpresso55s69_hello_world_s' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-22 14:24:50.012
+!MESSAGE Indexed 'lpcxpresso55s69_hello_world_ns' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY com.crt.log 1 0 2022-11-22 14:31:57.396
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 14:31:57.907
+!MESSAGE RedlinkServer telnet session connected on port 3025->51105 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 14:32:25.846
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 14:32:26.356
+!MESSAGE RedlinkServer telnet session connected on port 3025->51118 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 14:32:33.387
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=51124, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world_s/Debug, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 14:32:35.970
+!MESSAGE Telnet session connected on port 3330->51127 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 14:33:22.299
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 14:33:22.816
+!MESSAGE RedlinkServer telnet session connected on port 3025->51141 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 14:33:43.552
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2022-11-22 14:33:44.062
+!MESSAGE RedlinkServer telnet session connected on port 3025->51148 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2022-11-22 14:33:45.481
+!MESSAGE Starting GDB server [ C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=51150, -g, -mi, -2, -pLPC55S69, -vendor=NXP, --bootromstall, 0x50000040, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Temp/xtomes07/NXP/lpcxpresso55s69_hello_world_s/Debug, --flash-dir, C:/appz/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Temp/xtomes07/NXP/.mcuxpressoide_packages_support/LPC55S69_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2022-11-22 14:33:48.066
+!MESSAGE Telnet session connected on port 3330->51154 @ 127.0.0.1

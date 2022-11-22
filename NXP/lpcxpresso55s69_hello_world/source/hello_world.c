@@ -58,6 +58,27 @@ void TimerIRQ(uint32_t flags)
 	if(index==TABLE_LENGHT)index=0;
 }
 
+uint32_t strcmp_safe(const char *s1, const char *s2, const uint16_t size)
+{
+	uint16_t counter_t = 0;
+	uint16_t counter_f = 0;
+
+	for (uint16_t i = 0; i < size ;i++){
+		if (s1[i] == s2[i]) {
+			counter_t = counter_t + 1;
+		}
+		else {
+			counter_f = counter_f + 1;
+		}
+	}
+
+	if (counter_t == size){
+		return 0;
+	} else {
+		return 1;
+	}
+
+}
 /*******************************************************************************
  * Code
  ******************************************************************************/
@@ -81,6 +102,13 @@ int main(void)
     BOARD_InitBootPeripherals();
     BOARD_InitPeripherals();
     PQ_Init(POWERQUAD);
+
+    uint32_t DWT1, DWT2;
+    char password_stored[20] = "1234";
+    char input [20];
+    uint16_t status;
+
+
 #if !defined(DONT_ENABLE_FLASH_PREFETCH)
     /* enable flash prefetch for better performance */
     SYSCON->FMCCR |= SYSCON_FMCCR_PREFEN_MASK;
@@ -93,7 +121,27 @@ int main(void)
 
     while (1)
     {
+    	PRINTF("\r\nEnter password: ");
+    	SCANF("%s", input);
+
+        DWT1 = DWT ->CYCCNT;
+        status = strcmp_safe(input, password_stored, strlen(password_stored));
+        DWT2 = DWT->CYCCNT;
+        PRINTF("\r\nCycle in function: %d", DWT2 - DWT1);
+
+        PRINTF("\r\n input: %s", input);
+        if(status == 0) {
+        	PRINTF("\r\n input correct");
+        }
+        else {
+        	PRINTF("\r\n input invalid");
+        }
+
+
+        /*
         ch = GETCHAR();
         PUTCHAR(ch);
+		*/
+
     }
 }
