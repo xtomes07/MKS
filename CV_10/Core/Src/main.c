@@ -44,7 +44,10 @@ TIM_HandleTypeDef htim3;
 UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
+
 static volatile int8_t key = - 1;
+const int password[5] =  { 7, 9, 3, 2, 12 };
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -149,16 +152,61 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  static int16_t index = 0;
+	  static int32_t timer = 0;
+	  static int8_t correct = 0;
 
-	  HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
-	  HAL_Delay(250);
-	  //printf("Hello\n");
+
+	  if (HAL_GetTick() > timer + 3000 && index > 0) {
+		  index = 0;
+		  correct = 0;
+		  timer = HAL_GetTick();
+		  printf("cas vyprsel\n");
+	  }
 
 	  if (key != -1){
-		  printf("stisktnuto: %d \n", key);
+		  timer = HAL_GetTick();
+
+		  if (key == password[index]) {
+			  correct++;
+		  }
+
+		  if (index < 5){
+			  index++;
+		  } else {
+			  index = 0;
+			  printf("vynulovano\n");
+		  }
+
+
+		  printf("stisktnuto: %d -> na indexu: %d \n", key, index);
 		  HAL_Delay(200);
 		  key = -1;
+
+		  if (correct == 5 && index == 5){
+			  printf("Correct\n");
+			  HAL_GPIO_WritePin(LD1_GPIO_Port, LD1_Pin, GPIO_PIN_SET);
+			  HAL_Delay(3000);
+			  HAL_GPIO_WritePin(LD1_GPIO_Port, LD1_Pin, GPIO_PIN_RESET);
+			  index = 0;
+			  correct = 0;
+
+
+		  } else if (correct != 5 && index == 5){
+			  printf("Wrong\n");
+			  for (int16_t i; i < 6; i++){
+				  HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
+				  HAL_Delay(200);
+			  }
+			  index = 0;
+			  correct = 0;
+
+
+		  }
 	  }
+
+
+
 
   }
   /* USER CODE END 3 */
