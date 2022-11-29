@@ -178,7 +178,6 @@ int main(void)
 			  printf("vynulovano\n");
 		  }
 
-
 		  printf("stisktnuto: %d -> na indexu: %d \n", key, index);
 		  HAL_Delay(200);
 		  key = -1;
@@ -191,7 +190,6 @@ int main(void)
 			  index = 0;
 			  correct = 0;
 
-
 		  } else if (correct != 5 && index == 5){
 			  printf("Wrong\n");
 			  for (int16_t i; i < 6; i++){
@@ -200,7 +198,6 @@ int main(void)
 			  }
 			  index = 0;
 			  correct = 0;
-
 
 		  }
 	  }
