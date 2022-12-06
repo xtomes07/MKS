@@ -90,6 +90,26 @@ void circle(uint32_t radius)
 	}
 }
 
+void halfCircle(uint32_t radius){
+	for(int i = 0; i < 101; i++){
+		bool butt = false;
+		if(i < 25 || i > 75){
+			butt = true;
+		}else{
+			butt = false;
+		}
+		int32_t sx = 0;
+		int32_t sy = 0;
+		float x = radius * cos(M_PI*i/50);
+		float y = radius * sin(M_PI*i/50);
+		int32_t dx = sx - x;
+		int32_t dy = sy - y;
+		step(dx, dy, butt);
+		sx = sx - dx;
+		sy = sy - dy;
+	}
+}
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -139,21 +159,26 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 	  if(HAL_GPIO_ReadPin(USER_Btn_GPIO_Port, USER_Btn_Pin) == GPIO_PIN_SET) {
-		  step(10,-3,false); //head
+
 		  circle(10);
-		  step(0,0,false);
+		  step(0, 0, false);
 
-		  step(0,-100,true);	//nose
+		  step(-25, -100, false);
+		  circle(2);
+		  step(0, 0, false);
 
-		  /*
-		  uint8_t buff[4];
-		  buff[0] = 0x00; // stiskni leve tlacitko 0x01
-		  buff[1] = (int8_t)(10); // posun X +10
-		  buff[2] = (int8_t)(-3); // posun Y -3
-		  buff[3] = 0; // bez scrollu
-		  USBD_HID_SendReport(&hUsbDeviceFS, buff, sizeof(buff));
-		  HAL_Delay(USBD_HID_GetPollingInterval(&hUsbDeviceFS));
-		  */
+		  step(70, 0, false);
+		  circle(2);
+		  step(0, 0, false);
+
+		  step(-35, 0, false);
+		  step(0, 0, true);
+		  step(0, 25, true);
+		  step(0, 0, false);
+
+		  step(0, 50, false);
+		  halfCircle(7);
+		  step(0, 0, false);
 	  }
   }
   /* USER CODE END 3 */
