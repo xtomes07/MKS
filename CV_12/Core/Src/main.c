@@ -56,6 +56,8 @@ void StartDefaultTask(void const * argument);
 
 /* USER CODE BEGIN PFP */
 
+extern void tcpecho_init(void);
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -119,6 +121,10 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
+
+  /* Initialize tcp echo server */
+  tcpecho_init();
+
   /* USER CODE END RTOS_THREADS */
 
   /* Start scheduler */
